@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TrustLite Wallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="logo">
+    <h1>🔐 TrustLite Wallet</h1>
+  </div>
+
+  <div id="auth-container" class="auth-container">
+    <h2>Login / Register</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+    <p id="auth-message" style="color: red;"></p>
+  </div>
+
+  <div id="dashboard" class="dashboard hidden">
+    <h2>Welcome to TrustLite</h2>
+    <div id="wallet-info"></div>
+    <div id="crypto-prices"></div>
+
+    <div>
+      <h3>Send Crypto</h3>
+      <input type="text" id="recipient" placeholder="Recipient Username" />
+      <select id="asset">
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="LTC">LTC</option>
+        <option value="USDT">USDT</option>
+        <option value="BNB">BNB</option>
+      </select>
+      <input type="number" id="amount" placeholder="Amount" />
+      <button onclick="sendCrypto()">Send</button>
+      <p id="send-message" style="color: yellow;"></p>
+    </div>
+
+    <div class="external-transfer">
+      <h3>Simulate Sending to External Wallet</h3>
+      <input type="text" id="externalWallet" placeholder="Wallet Address" />
+      <select id="externalAsset">
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+        <option value="LTC">LTC</option>
+        <option value="USDT">USDT</option>
+        <option value="BNB">BNB</option>
+      </select>
+      <input type="number" id="amountInUSD" placeholder="Amount in USD" />
+      <button onclick="simulateExternalSend()">Confirm Transfer</button>
+      <div id="externalMessage"></div>
+    </div>
+
+    <h3>Transaction History</h3>
+    <div id="transaction-history"></div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
