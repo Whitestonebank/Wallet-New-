@@ -1,0 +1,65 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #1f1f2e, #232c3c);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.auth-container, .dashboard {
+  background-color: #2c3545;
+  padding: 30px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+}
+
+input, select {
+  background-color: #3c4758;
+  color: white;
+}
+
+button {
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #00e5ff;
+}
+
+#crypto-prices p, #wallet-info p, #transaction-history p {
+  margin: 8px 0;
+  padding: 6px;
+  background: #3a4455;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
